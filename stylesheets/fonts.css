@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Embroidery-Regular';
+    src: url('../fonts/Embroidery-Regular.ttf') format('truetype'),
+}
+
+/* Подключение шрифта Cheshem-Regular */
+@font-face {
+    font-family: 'Cheshem-Regular';
+    src: url('../fonts/Cheshem-Regular.ttf') format('truetype'),
+}

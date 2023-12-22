@@ -1,0 +1,162 @@
+@keyframes cross {
+    0% {
+      background-position: 0 40%;
+    }
+    100% {
+      background-position: 0 75%;
+    }  
+  }
+@keyframes reverse-cross {
+    0% {
+      background-position: 0 75%;
+    }
+    100% {
+      background-position: 0 40%;
+    }
+  }
+@keyframes lines {
+    0% {
+      background-position: 80% 0;
+    }
+    100% {
+      background-position: 50% 0;
+    }
+  }
+@keyframes running-text {
+    to {
+        transform: translateX(-49vw);
+    }
+  }
+@keyframes circle-motion-large {
+    0%, 100% {
+        background-position: center;
+    }
+    25% {
+        background-position: 65% 65%; /* Увеличенная амплитуда в 1.5 раза */
+    }
+    50% {
+        background-position: 85% 45%; /* Увеличенная амплитуда в 1.5 раза */
+    }
+    75% {
+        background-position: 65% 25%; /* Увеличенная амплитуда в 1.5 раза */
+    }
+  }
+  
+@keyframes circle-motion-small {
+    0%, 100% {
+        background-position: center;
+    }
+    25% {
+        background-position: 55% 55%; /* Меньшая амплитуда, чем у bg1 */
+    }
+    50% {
+        background-position: 60% 50%; /* Меньшая амплитуда, чем у bg1 */
+    }
+    75% {
+        background-position: 55% 45%; /* Меньшая амплитуда, чем у bg1 */
+    }
+  }
+@keyframes running-textname {
+    to {
+        transform: translateX(-65.13vw); /* Конечное положение слева от контейнера */
+    }
+  }
+@keyframes move-right {
+    to {
+        background-position: 100% 1vh;
+    }
+  }
+  
+@keyframes move-left {
+    to {
+        background-position: -100% 29.6vh;
+    }
+  }
+@keyframes move-left2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+  
+@keyframes move-right2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+@keyframes move-up-down {
+    0%, 100% {
+        background-position: -0.2vw -7vh;
+    }
+    50% {
+        background-position: -0.2vw -25vh; /* Измените это значение в зависимости от желаемого диапазона движения */
+    }
+  }
+@keyframes color-change {
+    0%, 100% {
+        background-color: #0047FF; /* Синий в начале и в конце анимации */
+    }
+    50% {
+        background-color: #FF0000; /* Красный в середине анимации */
+    }
+  }
+@keyframes move-up-down2 {
+    0%, 100% {
+        transform: translateY(-120vh); 
+    }
+    25%  {
+        transform: translateY(-50vh);
+    }
+    50% {
+      transform: translateY(-55vh);
+    }
+    75% {
+      transform: translateY(-70vh);
+    }
+  }
+@keyframes color-change2 {
+    0%, 100% {
+      background-color: #171717;
+    }
+    33% {
+      background-color: #0047FF;
+    }
+    66% {
+      background-color: #FF0000;
+    }
+  }
+@keyframes bashkir {
+    0%, 100% {
+      transform: translateX(10vw); /* Начало и конец анимации в исходном положении */
+  }
+  50% {
+      transform: translateX(-322vw); /* Сдвиг на 400vw влево */
+  }
+  }
+@keyframes move-up-down3 {
+    0%, 100% {
+        transform: translateY(-70vh); 
+    }
+    50%  {
+        transform: translateY(-10vh);
+    }
+  }
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 1; /* Полностью непрозрачный */
+    }
+    50% {
+        opacity: 0.2; /* Немного прозрачный (угасание на 20%) */
+    }
+  }
+@keyframes shaking {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-1vw, 1vh);
+    }
+    50% {
+        transform: translate(1vw, -1vh);
+    }
+    75% {
+        transform: translate(-1vw, 1vh);
+    }
+  }

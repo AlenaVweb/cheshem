@@ -1,0 +1,390 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+}
+.firstscreen {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 82vh;
+}
+.first_line {
+  padding: 0 1vw;
+  background-image: url(../images/crosses.svg);
+  background-size: 6vw auto;
+  background-origin: content-box;
+  background-repeat: repeat-y;
+  background-color: #171717;
+  width: 6vw;
+  height: 81.23vh;
+  animation: cross 1s linear infinite;
+}
+.first_line:hover {
+  animation-name: reverse-cross; /* Новая анимация для наведения */
+  animation-duration: 4s; /* Замедление анимации */
+}
+.second_line {
+  background-image: url(../images/straightlines.svg);
+  background-size: 500% auto;
+  background-origin: content-box;
+  width: 8vw;
+  height: 81.23vh;
+  background-repeat: repeat-y;
+  animation: lines 0.8s linear infinite;
+}
+.second_line:hover {
+  animation-duration: 2s;
+}
+.firsthypnosis {
+  display: flex;
+  flex-direction: column;
+  height: 81.23vh;
+  width: 84vw;
+}
+.museum {
+  font-family: 'Cheshem-Regular';
+  font-size: 4.5vh;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding-top: 1vh;
+
+  height: 5.8vh;
+  width: 100%;
+  background-color: #FF0000;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.museum .text-container {
+  padding-left: 50px;
+  white-space: nowrap;
+  overflow: hidden; 
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.museum .text-container span {
+  display: inline-block;
+  animation: running-text 10s linear infinite;
+}
+.museum .text-container span:hover {
+  animation-play-state: paused;
+}
+.hypnosis1screen {
+  height: 75.43vh;
+  position: relative;
+}
+
+.hypnosisbg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bg1 {
+  background-image: url(../images/backsymbolv.svg);
+  z-index: -2;
+  background-position: -80vw -85vh;
+  animation: circle-motion-large 2.5s linear infinite;
+}
+
+.bg2 {
+  background-image: url(../images/backletters.svg);
+  z-index: -1;
+  background-position: -52vw -72vh;
+  animation: circle-motion-small 4s linear infinite;
+}
+.runningtextname {
+  font-family: 'Cheshem-Regular';
+  font-size: 9.6vh;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding-top: 4.4vh;
+  background-color: #171717;
+  white-space: nowrap;
+  height: 14vh;
+  overflow: hidden;
+}
+.runningtextname span {
+  display: inline-block; /* Делаем span блочно-строчным элементом */
+  animation: running-textname 4s linear infinite; /* Бесконечная анимация */
+}
+.runningtextname:hover span {
+  animation-play-state: paused; /* Останавливаем анимацию при наведении */
+}
+.secondscreen {
+  display: flex;
+  width: 100%;
+  height: 82vh;
+}
+.ssleft {
+  display: flex;
+  flex-direction: column;
+  width: 48vw;
+  height: 100%;
+  overflow: hidden;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #FF0000;
+  position: relative;
+}
+.top::before, .top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/bluetriangles.svg);
+  background-repeat: repeat-x;
+  z-index: 2;
+  transition: animation-duration 0.3s;
+}
+.top::before {
+  background-position: -2vw 1vh;
+  animation: move-right 2s linear infinite;
+}
+
+.top::after {
+  background-position: -2vw 29.6vh;
+  animation: move-left 2s linear infinite;
+}
+.top:hover::before {
+  animation-duration: 6s; /* Увеличиваем продолжительность анимации при наведении */
+}
+
+.top:hover::after {
+  animation-duration: 6s; /* Увеличиваем продолжительность анимации при наведении */
+}
+
+.relax, .immerse {
+  position: relative; 
+  z-index: 1; 
+}
+.relax, .immerse {
+  font-family: 'Cheshem-Regular';
+  font-size: 4.4vh;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block; 
+  white-space: nowrap;
+  position: relative;
+}
+.relax {
+  padding-top: 13.4vh;
+  animation: move-left2 10s linear infinite;
+}
+.immerse {
+  padding-top: 2.7vh; 
+  animation: move-right2 10s linear infinite;
+}
+.bottom {
+  display: flex;
+  height: 42vh;
+}
+.left {
+  width: 12.3vw;
+}
+.redlines {
+  background-image: url(../images/redlines.svg);
+  background-repeat: no-repeat;
+  background-position: -0.2vw -30vh;
+  animation: move-up-down 2s linear infinite;
+}
+.redlines:hover {
+  animation-play-state: paused;
+}
+.blue {
+  background-color: #0047FF;
+  animation: color-change 0.5s linear infinite;
+}
+.blue:hover {
+  background-color: #0047FF; 
+  animation: none; 
+}
+.blacklines {
+  background-color: #FF0000;
+}
+.blacklines img {
+  display: block;
+  width: 10.1vw;
+  object-fit: cover;
+  padding-left: 0.4vw;
+  animation: move-up-down2 9s linear infinite;
+}
+.black {
+  animation: color-change2 1.8s linear infinite alternate;
+}
+.black:hover {
+  background-color: #171717; 
+  animation: none; 
+}
+.ssright {
+  height: 100%;
+  width: 62vw;
+  position: relative;
+}
+
+.rightbg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bg3 {
+  background-image: url(../images/backletters2.svg);
+  z-index: -2;
+  background-position: -50vw 0vh;
+  animation: circle-motion-large 5s linear infinite;
+}
+
+.bg4 {
+  background-image: url(../images/backsymbols2.svg);
+  z-index: -1;
+  background-position: -52vw 0vh;
+  animation: circle-motion-small 3s linear infinite;
+}
+
+.thirdscreen {
+  display: flex;
+  width: 100%;
+  height: 76.2vh;
+}
+.thsleft {
+  height: 100%;
+  width: 45vw;
+  position: relative;
+  overflow: hidden;
+}
+.bashkir_letters {
+  height: 160vh;
+  position: absolute;
+  overflow: hidden;
+}
+.bg5 {
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  z-index: -3;
+  background-position: -0vw 0vh;
+  width: 100%
+}
+
+.lines {
+  background-image: url(../images/bluelines.svg);
+  background-repeat: no-repeat;
+  z-index: -2;
+  width: 24.25%;
+  position: absolute;
+  left: 22.2vw;
+  animation: move-up-down3 9s linear infinite;
+}
+.letters {
+  background-image: url(../images/bashkirletters.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-position: -0vw 0vh;
+  width: 360vw;
+  height: 100%;
+  position: absolute;
+  top: 1.5vw;
+  animation: bashkir 20s linear infinite;
+}
+.thsright {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 55vw;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.fourthscreen {
+  height: 75vh;
+  width: 100%;
+  position: relative;
+}
+.see {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.bg6 {
+  background-image: url(../images/yousee2.svg);
+  z-index: -3;
+  background-position: -0vw 1vh;
+  animation: fade-in-out 4s linear infinite;
+}
+.bg7 {
+  background-image: url(../images/yousee1.svg);
+  z-index: -1;
+  background-position: 1vw 10vh;
+  animation: shaking 0.5s linear infinite;
+}
+.you_see {
+  position: absolute;
+  top: 32vh;
+  left: 35vw;
+}
+.hello {
+  position: relative;
+  font-family: 'Cheshem-Regular';
+  font-size: 9.6vh;
+  color: white;
+  letter-spacing: 0.2em;
+}
+.hello span {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hello span:first-child {
+  opacity: 1;
+  left: 2vw;
+}
+
+.hello:hover span:first-child {
+  opacity: 0;
+}
+
+.hello:hover span:last-child {
+  opacity: 1;
+}
+.basement {
+  font-family: 'Cheshem-Regular';
+  font-size: 4.5vh;
+  color: white;
+  letter-spacing: 0.2em;
+  padding-top: 1.5vh;
+
+  height: 5.8vh;
+  width: 100%;
+  background-color: #FF0000;
+  height: 5.8vh;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.basement span {
+  position: absolute;
+  top: 1.3vh;
+  display: inline-block;
+  animation: running-text 10s linear infinite;
+}
+.basement span:hover {
+  animation-play-state: paused;
+}
