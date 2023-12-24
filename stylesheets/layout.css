@@ -3,34 +3,44 @@ body {
   height: 100%;
   background-color: #171717;
 }
-.firstscreen {
+.firstscreen,
+.secondscreen,
+.thirdscreen {
   display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.firstscreen,
+.secondscreen,
+.firsthypnosis {
+  height: 82vh;
+}
+.firstscreen {
   justify-content: flex-start;
   width: 100%;
+}
+.first_line,
+.second_line {
   height: 82vh;
+  background-origin: content-box;
+  background-repeat: repeat-y;
 }
 .first_line {
   padding: 0 1vw;
   background-image: url(../images/crosses.svg);
   background-size: 6vw auto;
-  background-origin: content-box;
-  background-repeat: repeat-y;
   background-color: #171717;
   width: 6vw;
-  height: 81.23vh;
   animation: cross 1s linear infinite;
 }
 .first_line:hover {
-  animation-name: reverse-cross; /* Новая анимация для наведения */
-  animation-duration: 4s; /* Замедление анимации */
+  animation-name: reverse-cross;
+  animation-duration: 4s;
 }
 .second_line {
   background-image: url(../images/straightlines.svg);
   background-size: 500% auto;
-  background-origin: content-box;
   width: 8vw;
-  height: 81.23vh;
-  background-repeat: repeat-y;
   animation: lines 0.8s linear infinite;
 }
 .second_line:hover {
@@ -39,20 +49,21 @@ body {
 .firsthypnosis {
   display: flex;
   flex-direction: column;
-  height: 81.23vh;
   width: 84vw;
 }
-.museum {
+.common-font {
   font-family: 'Cheshem-Regular';
-  font-size: 4.5vh;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+.museum,
+.basement {
+  background-color: #FF0000; 
+  height: 6vh;
+  font-size: 4.5vh;
   padding-top: 1vh;
-
-  height: 5.8vh;
   width: 100%;
-  background-color: #FF0000;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
@@ -73,10 +84,13 @@ body {
   animation-play-state: paused;
 }
 .hypnosis1screen {
-  height: 75.43vh;
+  height: 76vh;
   position: relative;
 }
-
+.hypnosis1screen:hover > .bg1,
+.ssright:hover > .bg4 {
+  animation-play-state: paused;
+}
 .hypnosisbg {
   height: 100%;
   width: 100%;
@@ -97,35 +111,37 @@ body {
   animation: circle-motion-small 4s linear infinite;
 }
 .runningtextname {
-  font-family: 'Cheshem-Regular';
   font-size: 9.6vh;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
   padding-top: 4.4vh;
   background-color: #171717;
   white-space: nowrap;
   height: 14vh;
   overflow: hidden;
+  width: 100%;
 }
 .runningtextname span {
-  display: inline-block; /* Делаем span блочно-строчным элементом */
-  animation: running-textname 4s linear infinite; /* Бесконечная анимация */
+  display: inline-block;
+  animation: running-textname 4s linear infinite; 
+  width: 100%;
 }
 .runningtextname:hover span {
-  animation-play-state: paused; /* Останавливаем анимацию при наведении */
+  animation-play-state: paused; 
 }
 .secondscreen {
-  display: flex;
   width: 100%;
   height: 82vh;
 }
 .ssleft {
   display: flex;
   flex-direction: column;
-  width: 48vw;
+  width: 45vw;
   height: 100%;
   overflow: hidden;
+}
+.ssright {
+  height: 100%;
+  width: 55vw;
+  position: relative;
 }
 .top {
   display: flex;
@@ -140,30 +156,30 @@ body {
 .top::before, .top::after {
   content: '';
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 30%;
   background-image: url(../images/bluetriangles.svg);
   background-repeat: repeat-x;
+  background-size: contain;
   z-index: 2;
   transition: animation-duration 0.3s;
 }
 .top::before {
-  background-position: -2vw 1vh;
+  top: 5%;
   animation: move-right 2s linear infinite;
 }
 
 .top::after {
-  background-position: -2vw 29.6vh;
-  animation: move-left 2s linear infinite;
+  top: 65%;
+  animation: move-right 2s linear infinite;
 }
 .top:hover::before {
-  animation-duration: 6s; /* Увеличиваем продолжительность анимации при наведении */
+  animation-duration: 6s; 
 }
 
 .top:hover::after {
-  animation-duration: 6s; /* Увеличиваем продолжительность анимации при наведении */
+  animation-duration: 6s; 
 }
 
 .relax, .immerse {
@@ -171,11 +187,7 @@ body {
   z-index: 1; 
 }
 .relax, .immerse {
-  font-family: 'Cheshem-Regular';
   font-size: 4.4vh;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
   display: block; 
   white-space: nowrap;
   position: relative;
@@ -191,6 +203,7 @@ body {
 .bottom {
   display: flex;
   height: 42vh;
+  width: 100%;
 }
 .left {
   width: 12.3vw;
@@ -198,8 +211,14 @@ body {
 .redlines {
   background-image: url(../images/redlines.svg);
   background-repeat: no-repeat;
-  background-position: -0.2vw -30vh;
   animation: move-up-down 2s linear infinite;
+}
+.redlines img {
+  display: block;
+  width: 100%;
+  object-fit: fill;
+  height: 200vh;
+  overflow: hidden;
 }
 .redlines:hover {
   animation-play-state: paused;
@@ -217,9 +236,9 @@ body {
 }
 .blacklines img {
   display: block;
-  width: 10.1vw;
-  object-fit: cover;
-  padding-left: 0.4vw;
+  width: 100%;
+  object-fit: fill;
+  height: 200vh;
   animation: move-up-down2 9s linear infinite;
 }
 .black {
@@ -228,11 +247,6 @@ body {
 .black:hover {
   background-color: #171717; 
   animation: none; 
-}
-.ssright {
-  height: 100%;
-  width: 62vw;
-  position: relative;
 }
 
 .rightbg {
@@ -254,26 +268,31 @@ body {
   background-position: -52vw 0vh;
   animation: circle-motion-small 3s linear infinite;
 }
-
-.thirdscreen {
-  display: flex;
-  width: 100%;
-  height: 76.2vh;
+.thirdscreen,
+.fourthscreen {
+  height: 75vh;
 }
 .thsleft {
   height: 100%;
-  width: 45vw;
+  width: 50vw;
   position: relative;
   overflow: hidden;
+}
+.thsright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 50vw;
 }
 .bashkir_letters {
   height: 160vh;
   position: absolute;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 .bg5 {
   background-image: url(../images/background.svg);
-  background-repeat: no-repeat;
   z-index: -3;
   background-position: -0vw 0vh;
   width: 100%
@@ -281,7 +300,6 @@ body {
 
 .lines {
   background-image: url(../images/bluelines.svg);
-  background-repeat: no-repeat;
   z-index: -2;
   width: 24.25%;
   position: absolute;
@@ -290,7 +308,6 @@ body {
 }
 .letters {
   background-image: url(../images/bashkirletters.svg);
-  background-repeat: no-repeat;
   z-index: -1;
   background-position: -0vw 0vh;
   width: 360vw;
@@ -298,22 +315,87 @@ body {
   position: absolute;
   top: 1.5vw;
   animation: bashkir 20s linear infinite;
-}
-.thsright {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 55vw;
+  
 }
 .row {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
-
+.cubes {
+  height: 100%;
+  width: 33%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.c1 {
+  background-image: url(../images/cube1.svg);
+  animation: change-image1 1s infinite;
+}
+.c2 {
+  background-image: url(../images/cube2.svg);
+  animation: change-image2 1s infinite;
+}
+.c3 {
+  background-image: url(../images/cube3.svg);
+  animation: change-image3 1s infinite;
+}
+.c1,
+.c2,
+.c3 {
+  background-position: 1.7vw 0vh;
+}
+.c4 {
+  background-image: url(../images/cube4.svg);
+  animation: change-image4 1s infinite;
+}
+.c5 {
+  background-image: url(../images/cube5.svg);
+  animation: change-image5 1s infinite;
+}
+.c6 {
+  background-image: url(../images/cube6.svg);
+  animation: change-image6 1s infinite;
+}
+.c4,
+.c5,
+.c6 {
+  background-position: 1.7vw 1.5vh;
+}
+.c7 {
+  background-image: url(../images/cube7.svg);
+  animation: change-image7 1s infinite;
+}
+.c8 {
+  background-image: url(../images/cube8.svg);
+  animation: change-image8 1s infinite;
+}
+.c9 {
+  background-image: url(../images/cube9.svg);
+  animation: change-image9 1s infinite;
+}
+.c7,
+.c8,
+.c9 {
+  background-position: 1.7vw 3vh;
+}
+.c1:hover, 
+.c2:hover, 
+.c3:hover, 
+.c4:hover, 
+.c5:hover, 
+.c6:hover, 
+.c7:hover, 
+.c8:hover, 
+.c9:hover {
+  animation-play-state: paused;
+  animation-delay: 99999s;
+}
 .fourthscreen {
-  height: 75vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .see {
   width: 100%;
@@ -324,26 +406,25 @@ body {
 .bg6 {
   background-image: url(../images/yousee2.svg);
   z-index: -3;
-  background-position: -0vw 1vh;
+  background-position: center;
   animation: fade-in-out 4s linear infinite;
 }
 .bg7 {
   background-image: url(../images/yousee1.svg);
   z-index: -1;
-  background-position: 1vw 10vh;
+  background-position: center;
   animation: shaking 0.5s linear infinite;
 }
 .you_see {
   position: absolute;
-  top: 32vh;
-  left: 35vw;
+  width: 27vw;
+  height: 9vh;
+  top: 35vh;
+  left: 37vw;
 }
 .hello {
   position: relative;
-  font-family: 'Cheshem-Regular';
   font-size: 9.6vh;
-  color: white;
-  letter-spacing: 0.2em;
 }
 .hello span {
   position: absolute;
@@ -363,27 +444,12 @@ body {
 .hello:hover span:last-child {
   opacity: 1;
 }
-.basement {
-  font-family: 'Cheshem-Regular';
-  font-size: 4.5vh;
-  color: white;
-  letter-spacing: 0.2em;
-  padding-top: 1.5vh;
-
-  height: 5.8vh;
-  width: 100%;
-  background-color: #FF0000;
-  height: 5.8vh;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-}
 .basement span {
   position: absolute;
   top: 1.3vh;
   display: inline-block;
   animation: running-text 10s linear infinite;
+  width: 100%;
 }
 .basement span:hover {
   animation-play-state: paused;

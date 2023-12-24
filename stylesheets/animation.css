@@ -63,15 +63,15 @@
   }
 @keyframes move-right {
     to {
-        background-position: 100% 1vh;
+        background-position: 100% 0;
     }
   }
   
-@keyframes move-left {
+/* @keyframes move-left {
     to {
         background-position: -100% 29.6vh;
     }
-  }
+  } */
 @keyframes move-left2 {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } 
@@ -158,5 +158,104 @@
     }
     75% {
         transform: translate(-1vw, 1vh);
+    }
+  }
+  @keyframes change-image1 {
+    0%, 100% { 
+      background-image: url(../images/cube1.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube7.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube5.svg); 
+    }
+  }
+  @keyframes change-image2 {
+    0%, 100% { 
+      background-image: url(../images/cube2.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube3.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube9.svg); 
+    }
+  }
+  @keyframes change-image3 {
+    0%, 100% { 
+      background-image: url(../images/cube3.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube4.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube7.svg); 
+    }
+  }
+  @keyframes change-image4 {
+    0%, 100% { 
+      background-image: url(../images/cube4.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube9.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube8.svg); 
+    }
+  }
+  @keyframes change-image5 {
+    0%, 100% { 
+      background-image: url(../images/cube5.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube1.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube6.svg); 
+    }
+  }
+  @keyframes change-image6 {
+    0%, 100% { 
+      background-image: url(../images/cube6.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube2.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube4.svg); 
+    }
+  }
+  @keyframes change-image7 {
+    0%, 100% { 
+      background-image: url(../images/cube7.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube8.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube2.svg); 
+    }
+  }
+  @keyframes change-image8 {
+    0%, 100% { 
+      background-image: url(../images/cube8.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube7.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube2.svg); 
+    }
+  }
+  @keyframes change-image9 {
+    0%, 100% { 
+      background-image: url(../images/cube9.svg); 
+    }
+    33% { 
+      background-image: url(../images/cube5.svg); 
+    }
+    67% { 
+      background-image: url(../images/cube1.svg); 
     }
   }
