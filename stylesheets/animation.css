@@ -28,13 +28,13 @@
       background-position: center;
   }
   25% {
-      background-position: 65% 65%; /* Увеличенная амплитуда в 1.5 раза */
+      background-position: 65% 65%;
   }
   50% {
-      background-position: 85% 45%; /* Увеличенная амплитуда в 1.5 раза */
+      background-position: 85% 45%;
   }
   75% {
-      background-position: 65% 25%; /* Увеличенная амплитуда в 1.5 раза */
+      background-position: 65% 25%;
   }
 }
   
@@ -43,13 +43,13 @@
       background-position: center;
   }
   25% {
-      background-position: 55% 55%; /* Меньшая амплитуда, чем у screen1__bg1 */
+      background-position: 55% 55%;
   }
   50% {
-      background-position: 60% 50%; /* Меньшая амплитуда, чем у screen1__bg1 */
+      background-position: 60% 50%;
   }
   75% {
-      background-position: 55% 45%; /* Меньшая амплитуда, чем у screen1__bg1 */
+      background-position: 55% 45%;
   }
 }
 
@@ -61,7 +61,7 @@
 
 @keyframes running-museum-name {
   to {
-      transform: translateX(-87.5vh); /* Конечное положение слева от контейнера */
+      transform: translateX(-87.5vh);
   }
 }
 
@@ -101,10 +101,10 @@
 
 @keyframes color-change {
   0%, 100% {
-      background-color: #0047FF; /* Синий в начале и в конце анимации */
+      background-color: #0047FF;
   }
   50% {
-      background-color: #FF0000; /* Красный в середине анимации */
+      background-color: #FF0000;
   }
 }
 @keyframes move-up-down2 {
@@ -134,15 +134,15 @@
 }
 @keyframes bashkir {
   0%, 100% {
-      transform: translateX(10vw); /* Начало и конец анимации в исходном положении */
+      transform: translateX(10vw);
   }
   50% {
-      transform: translateX(-322vw); /* Сдвиг на 400vw влево */
+      transform: translateX(-322vw);
   }
 }
 @keyframes move-up-down {
   0%, 100% {
-    background-position: 0 -10%; /* Начальное и конечное положение: смещаем вверх на 10 пикселей */
+    background-position: 0 -10%;
   }
   50% {
     background-position: 0 -20%;
@@ -158,10 +158,10 @@
 }
 @keyframes fade-in-out {
   0%, 100% {
-      opacity: 1; /* Полностью непрозрачный */
+      opacity: 1;
   }
   50% {
-      opacity: 0.2; /* Немного прозрачный (угасание на 20%) */
+      opacity: 0.2;
   }
 }
 @keyframes shaking {

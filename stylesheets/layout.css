@@ -332,7 +332,10 @@ body {
   position: absolute;
   background-size: contain;
   animation: bashkir 20s linear infinite;
-  
+
+}
+.screen3__left-column:hover > .screen3__left-col-letters {
+  animation-play-state: paused;
 }
 .screen3__right-column {
   display: grid;
@@ -410,9 +413,9 @@ body {
 }
 .screen4__bg1 {
   background-image: url(../images/yousee2.svg);
+  z-index: -3;
   background-size: cover;
   background-position: center;
-  z-index: -3;
   animation: fade-in-out 4s linear infinite;
 }
 .screen4__bg2 {

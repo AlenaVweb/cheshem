@@ -32,7 +32,11 @@
         animation-name: lines-1000;
         background-size: auto;
         order: 3;
+        background-position: 0 20.5%;
         background-image: url(../images/straightlines_adaptive.svg);
+    }
+    .screen1__lines:hover {
+        animation-play-state: paused;
     }
 
     .screen2 {
@@ -74,6 +78,19 @@
     .screen3__left-col-lines {
         left: 48vw;
     }
+   .screen3__left-col-letters {
+       animation: screen3__left-col-letters-1000 20s linear infinite;
+   }
+
+}
+
+@keyframes screen3__left-col-letters-1000 {
+    0%, 100% {
+        transform: translateX(8vw);
+    }
+    50% {
+        transform: translateX(-235vw);
+    }
 }
 
 @keyframes crosses-1000 {
@@ -82,10 +99,7 @@
     }
 }
 @keyframes lines-1000 {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 50%;
+    to {
+        background-position-y: 50%;
     }
 }
