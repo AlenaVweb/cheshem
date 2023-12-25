@@ -22,8 +22,10 @@
 
     .screen1__crosses {
         animation-name: crosses-1000;
+        padding: 0;
         order: 2;
-        padding-top: 2vh;
+        background-position: 0 50%;
+        background-size: auto 6vh;
     }
 
     .screen1__lines {
@@ -32,7 +34,10 @@
         order: 3;
         background-image: url(../images/straightlines_adaptive.svg);
     }
-    
+
+    .screen2 {
+        height: 54vh;
+    }
     .screen2__left-column__bottom {
         height: 82vh;
     }
@@ -72,11 +77,8 @@
 }
 
 @keyframes crosses-1000 {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 20% 0;
+    to {
+        background-position-x: 20%;
     }
 }
 @keyframes lines-1000 {

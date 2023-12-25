@@ -2,7 +2,7 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: #171717;
+  background-color:#171717;
 }
 
 .common-font {
@@ -223,17 +223,14 @@ body {
 }
 .screen2__swim-red-lines {
   background-image: url(../images/redlines.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: contain;
   background-position: center;
+  height: 300vh;
+  /*overflow: hidden;*/
+  animation: move-up-down 3s linear infinite;
 }
-.screen2__swim-red-lines img {
-  display: block;
-  width: 100%;
-  object-fit: fill;
-  height: 200vh;
-  overflow: hidden;
-}
+
 .screen2__swim-red-lines:hover {
   animation-play-state: paused;
 }
@@ -413,8 +410,9 @@ body {
 }
 .screen4__bg1 {
   background-image: url(../images/yousee2.svg);
-  z-index: -3;
+  background-size: cover;
   background-position: center;
+  z-index: -3;
   animation: fade-in-out 4s linear infinite;
 }
 .screen4__bg2 {

@@ -140,6 +140,14 @@
       transform: translateX(-322vw); /* Сдвиг на 400vw влево */
   }
 }
+@keyframes move-up-down {
+  0%, 100% {
+    background-position: 0 -10%; /* Начальное и конечное положение: смещаем вверх на 10 пикселей */
+  }
+  50% {
+    background-position: 0 -20%;
+  }
+}
 @keyframes move-up-down3 {
   0%, 100% {
       transform: translateY(-70vh); 
