@@ -15,7 +15,6 @@
 
     .screen1__crosses,
     .screen1__lines {
-        /* transform: rotate(90deg); */
         background-repeat: repeat-x;
         width: 100vw;
     }
@@ -25,15 +24,20 @@
         padding: 0;
         order: 2;
         background-position: 0 50%;
-        background-size: auto 6vh;
+        background-size: 6vh 6vh;
+    }
+    .screen1__crosses:hover {
+        animation-duration: 1s;
+        animation-name: crosses-1000-reversed;
     }
 
     .screen1__lines {
         animation-name: lines-1000;
-        background-size: auto;
+        background-size: auto 8vh;
         order: 3;
-        background-position: 0 20.5%;
-        background-image: url(../images/straightlines_adaptive.svg);
+        background-position-x: 0;
+        background-repeat: repeat;
+        background-image: url(../images/lines-adaptive.svg);
     }
     .screen1__lines:hover {
         animation-play-state: paused;
@@ -95,11 +99,22 @@
 
 @keyframes crosses-1000 {
     to {
-        background-position-x: 20%;
+        background-position-x: 6vh;
+    }
+}
+@keyframes crosses-1000-reversed {
+    from {
+        background-position-x: 6vh;
+    }
+    to {
+        background-position-x: 0;
     }
 }
 @keyframes lines-1000 {
+    from {
+        background-position-y: 0;
+    }
     to {
-        background-position-y: 50%;
+        background-position-y: 8vh;
     }
 }

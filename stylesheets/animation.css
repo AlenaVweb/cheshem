@@ -1,25 +1,25 @@
 @keyframes cross {
   0% {
-    background-position: 0 40%;
+    background-position-y: 6vw;
   }
   100% {
-    background-position: 0 75%;
+    background-position-y: 24vw;
   }  
 }
 @keyframes reverse-cross {
   0% {
-    background-position: 0 75%;
+    background-position-y: 24vw;
   }
   100% {
-    background-position: 0 40%;
+    background-position-y: 6vw;
   }
 }
 @keyframes lines {
   0% {
-    background-position: 80% 0;
+    background-position-x: 80%;
   }
   100% {
-    background-position: 50% 0;
+    background-position-x: 50%;
   }
 }
 

@@ -82,7 +82,7 @@ body {
 .screen1__crosses {
   padding: 0 1vw;
   background-image: url(../images/crosses.svg);
-  background-size: 6vw auto;
+  background-size: 6vw 6vw;
   background-color: #171717;
   width: 6vw;
   animation: cross 1s linear infinite;
