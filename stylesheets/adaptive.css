@@ -1,0 +1,89 @@
+@media (max-width: 1000px) {
+    .screen1 {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .screen1__right-column {
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .screen1__hypnosis {
+        height: 60vh;
+    }
+
+    .screen1__crosses,
+    .screen1__lines {
+        /* transform: rotate(90deg); */
+        background-repeat: repeat-x;
+        width: 100vw;
+    }
+
+    .screen1__crosses {
+        animation-name: crosses-1000;
+        order: 2;
+        padding-top: 2vh;
+    }
+
+    .screen1__lines {
+        animation-name: lines-1000;
+        background-size: auto;
+        order: 3;
+        background-image: url(../images/straightlines_adaptive.svg);
+    }
+    
+    .screen2__left-column__bottom {
+        height: 82vh;
+    }
+    .screen2__left-column {
+        flex-direction: row;
+    }
+    .screen2__bashkir-swimlanes {
+        width: 24.6vw;
+    }
+    .screen2__left-column__top,
+    .screen2__swim-black-lines,
+    .screen2__swim-black {
+        display: none;
+    }
+    .screen2__left-column {
+        order: 2;
+    }
+    .screen2__right-column {
+        order: 1;
+    }
+
+
+    .screen3 {
+        flex-direction: column;
+    }
+    .screen3__left-column {
+        width: 100vw;
+    }
+    .screen3__right-column {
+        padding-top: 2vh;
+        height: 47vh;
+        width: 100vw;
+    }
+    .screen3__left-col-lines {
+        left: 48vw;
+    }
+}
+
+@keyframes crosses-1000 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20% 0;
+    }
+}
+@keyframes lines-1000 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

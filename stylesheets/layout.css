@@ -1,64 +1,29 @@
+/* Common properties */
 body {
   width: 100%;
   height: 100%;
   background-color: #171717;
 }
-.firstscreen,
-.secondscreen,
-.thirdscreen {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
-.firstscreen,
-.secondscreen,
-.firsthypnosis {
-  height: 82vh;
-}
-.firstscreen {
-  justify-content: flex-start;
-  width: 100%;
-}
-.first_line,
-.second_line {
-  height: 82vh;
-  background-origin: content-box;
-  background-repeat: repeat-y;
-}
-.first_line {
-  padding: 0 1vw;
-  background-image: url(../images/crosses.svg);
-  background-size: 6vw auto;
-  background-color: #171717;
-  width: 6vw;
-  animation: cross 1s linear infinite;
-}
-.first_line:hover {
-  animation-name: reverse-cross;
-  animation-duration: 4s;
-}
-.second_line {
-  background-image: url(../images/straightlines.svg);
-  background-size: 500% auto;
-  width: 8vw;
-  animation: lines 0.8s linear infinite;
-}
-.second_line:hover {
-  animation-duration: 2s;
-}
-.firsthypnosis {
-  display: flex;
-  flex-direction: column;
-  width: 84vw;
-}
+
 .common-font {
-  font-family: 'Cheshem-Regular';
+  font-family: 'Cheshem-Regular', serif;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-.museum,
-.basement {
+
+.running-span {
+  display: inline-block;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+.running-span:hover {
+  animation-play-state: paused;
+}
+
+.red-running-text {
   background-color: #FF0000; 
   height: 6vh;
   font-size: 4.5vh;
@@ -68,49 +33,11 @@ body {
   overflow: hidden;
   position: relative;
 }
-.museum .text-container {
-  padding-left: 50px;
-  white-space: nowrap;
-  overflow: hidden; 
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-.museum .text-container span {
-  display: inline-block;
-  animation: running-text 10s linear infinite;
-}
-.museum .text-container span:hover {
-  animation-play-state: paused;
-}
-.hypnosis1screen {
-  height: 76vh;
-  position: relative;
-}
-.hypnosis1screen:hover > .bg1,
-.ssright:hover > .bg4 {
-  animation-play-state: paused;
-}
-.hypnosisbg {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+.red-running-text .running-span {
+  animation-duration: 10s;
 }
 
-.bg1 {
-  background-image: url(../images/backsymbolv.svg);
-  z-index: -2;
-  background-position: -80vw -85vh;
-  animation: circle-motion-large 2.5s linear infinite;
-}
-
-.bg2 {
-  background-image: url(../images/backletters.svg);
-  z-index: -1;
-  background-position: -52vw -72vh;
-  animation: circle-motion-small 4s linear infinite;
-}
-.runningtextname {
+.black-running-text {
   font-size: 9.6vh;
   padding-top: 4.4vh;
   background-color: #171717;
@@ -119,31 +46,117 @@ body {
   overflow: hidden;
   width: 100%;
 }
-.runningtextname span {
-  display: inline-block;
-  animation: running-textname 4s linear infinite; 
+.black-running-text .running-span {
+  animation-duration: 4s;
+}
+
+/* Common screen properties */
+.screen1,
+.screen2,
+.screen3 {
+  display: flex;
   width: 100%;
+  overflow: hidden;
 }
-.runningtextname:hover span {
-  animation-play-state: paused; 
+.screen1,
+.screen2,
+.screen1__right-column {
+  height: 82vh;
 }
-.secondscreen {
+
+.screen1__hypnosis:hover > .screen1__bg1,
+.screen2__right-column:hover > .screen2__bg2 {
+  animation-play-state: paused;
+}
+
+/* Screen 1: introduction */
+.screen1 {
+  justify-content: flex-start;
+}
+.screen1__crosses,
+.screen1__lines {
+  height: 100%;
+  background-origin: content-box;
+  background-repeat: repeat-y;
+}
+.screen1__crosses {
+  padding: 0 1vw;
+  background-image: url(../images/crosses.svg);
+  background-size: 6vw auto;
+  background-color: #171717;
+  width: 6vw;
+  animation: cross 1s linear infinite;
+}
+.screen1__crosses:hover {
+  animation-name: reverse-cross;
+  animation-duration: 4s;
+}
+.screen1__lines {
+  background-image: url(../images/straightlines.svg);
+  background-size: 500% auto;
+  width: 8vw;
+  animation: lines 0.8s linear infinite;
+}
+.screen1__lines:hover {
+  animation-duration: 2s;
+}
+.screen1__right-column {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+}
+
+
+.screen1__hypnosis {
+  height: 76vh;
+  position: relative;
+}
+
+.screen1__hypnosis-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.screen1__bg1 {
+  background-image: url(../images/backsymbolv.svg);
+  z-index: -2;
+  background-position: -80vw -85vh;
+  animation: circle-motion-large 2.5s linear infinite;
+}
+
+.screen1__bg2 {
+  background-image: url(../images/backletters.svg);
+  z-index: -1;
+  background-position: -52vw -72vh;
+  animation: circle-motion-small 4s linear infinite;
+}
+
+.running-museum {
+  animation-name: running-museum;
+}
+.running-museum-name {
+  animation-name: running-museum-name;
+}
+
+/* Screen 2 */
+.screen2 {
   width: 100%;
   height: 82vh;
 }
-.ssleft {
+.screen2__left-column {
   display: flex;
   flex-direction: column;
   width: 45vw;
   height: 100%;
   overflow: hidden;
 }
-.ssright {
+.screen2__right-column {
   height: 100%;
   width: 55vw;
   position: relative;
 }
-.top {
+.screen2__left-column__top {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -153,7 +166,7 @@ body {
   background-color: #FF0000;
   position: relative;
 }
-.top::before, .top::after {
+.screen2__left-column__top::before, .screen2__left-column__top::after {
   content: '';
   position: absolute;
   left: 0;
@@ -165,20 +178,20 @@ body {
   z-index: 2;
   transition: animation-duration 0.3s;
 }
-.top::before {
+.screen2__left-column__top::before {
   top: 5%;
   animation: move-right 2s linear infinite;
 }
 
-.top::after {
+.screen2__left-column__top::after {
   top: 65%;
   animation: move-right 2s linear infinite;
 }
-.top:hover::before {
+.screen2__left-column__top:hover::before {
   animation-duration: 6s; 
 }
 
-.top:hover::after {
+.screen2__left-column__top:hover::after {
   animation-duration: 6s; 
 }
 
@@ -193,141 +206,151 @@ body {
   position: relative;
 }
 .relax {
-  padding-top: 13.4vh;
-  animation: move-left2 10s linear infinite;
+  padding-top: 15vh;
+  animation-name: move-left2;
 }
 .immerse {
-  padding-top: 2.7vh; 
-  animation: move-right2 10s linear infinite;
+  padding-top: 1.2vh; 
+  animation-name: move-right2;
 }
-.bottom {
+.screen2__left-column__bottom {
   display: flex;
   height: 42vh;
   width: 100%;
 }
-.left {
+.screen2__bashkir-swimlanes{
   width: 12.3vw;
 }
-.redlines {
+.screen2__swim-red-lines {
   background-image: url(../images/redlines.svg);
   background-repeat: no-repeat;
-  animation: move-up-down 2s linear infinite;
+  background-size: cover;
+  background-position: center;
 }
-.redlines img {
+.screen2__swim-red-lines img {
   display: block;
   width: 100%;
   object-fit: fill;
   height: 200vh;
   overflow: hidden;
 }
-.redlines:hover {
+.screen2__swim-red-lines:hover {
   animation-play-state: paused;
 }
-.blue {
+.screen2__swim-blue {
   background-color: #0047FF;
   animation: color-change 0.5s linear infinite;
 }
-.blue:hover {
+.screen2__swim-blue:hover {
   background-color: #0047FF; 
   animation: none; 
 }
-.blacklines {
+.screen2__swim-black-lines {
   background-color: #FF0000;
 }
-.blacklines img {
+.screen2__swim-black-lines-bg {
+  background-image: url(../images/blacklines.svg);
+  background-repeat: repeat-y;
+  background-size: contain;
   display: block;
   width: 100%;
-  object-fit: fill;
   height: 200vh;
   animation: move-up-down2 9s linear infinite;
 }
-.black {
+.screen2__swim-black {
   animation: color-change2 1.8s linear infinite alternate;
 }
-.black:hover {
+.screen2__swim-black:hover {
   background-color: #171717; 
   animation: none; 
 }
 
-.rightbg {
+.screen2__right-column__hypnosis {
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-.bg3 {
+.screen2__bg1 {
   background-image: url(../images/backletters2.svg);
   z-index: -2;
-  background-position: -50vw 0vh;
+  background-position: -50vw 0;
   animation: circle-motion-large 5s linear infinite;
 }
 
-.bg4 {
+.screen2__bg2 {
   background-image: url(../images/backsymbols2.svg);
   z-index: -1;
-  background-position: -52vw 0vh;
+  background-position: -52vw 0;
   animation: circle-motion-small 3s linear infinite;
 }
-.thirdscreen,
-.fourthscreen {
-  height: 75vh;
+
+.running-look {
+  animation-name: running-look;
 }
-.thsleft {
-  height: 100%;
-  width: 50vw;
+
+/* Screen 3 */
+.screen3 {
+  justify-content: space-between;
+}
+
+.screen3__left-column {
+  max-height: 100%;
+  height: 48vw;
+  width: 48vw;
   position: relative;
   overflow: hidden;
 }
-.thsright {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 50vw;
-}
-.bashkir_letters {
+.screen3__bashkir-letters {
   height: 160vh;
   position: absolute;
   overflow: hidden;
   background-repeat: no-repeat;
 }
-.bg5 {
+.screen3__left-col-bg {
   background-image: url(../images/background.svg);
   z-index: -3;
-  background-position: -0vw 0vh;
-  width: 100%
+  background-position: -0vw 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.lines {
+.screen3__left-col-lines {
   background-image: url(../images/bluelines.svg);
   z-index: -2;
-  width: 24.25%;
+  width: 26%;
   position: absolute;
-  left: 22.2vw;
+  left: 23vw;
   animation: move-up-down3 9s linear infinite;
+  background-size: 88% auto;
 }
-.letters {
+.screen3__left-col-letters {
   background-image: url(../images/bashkirletters.svg);
   z-index: -1;
-  background-position: -0vw 0vh;
+  background-position: -0vw 5%;
   width: 360vw;
   height: 100%;
   position: absolute;
-  top: 1.5vw;
+  background-size: contain;
   animation: bashkir 20s linear infinite;
   
 }
-.row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
+.screen3__right-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: minmax(auto, 1fr); 
+  grid-gap: 2vw;
+  width: 48vw;
+  height: 48vw;
+  max-height: 100%;
+  margin-right: 2vw;
 }
-.cubes {
-  height: 100%;
-  width: 33%;
+.screen3__cubes {
+  align-items: center;
   background-repeat: no-repeat;
-  background-origin: content-box;
+  background-size: min(35vmin, 100%) min(35vmin, 100%);
 }
 .c1 {
   background-image: url(../images/cube1.svg);
@@ -341,11 +364,6 @@ body {
   background-image: url(../images/cube3.svg);
   animation: change-image3 1s infinite;
 }
-.c1,
-.c2,
-.c3 {
-  background-position: 1.7vw 0vh;
-}
 .c4 {
   background-image: url(../images/cube4.svg);
   animation: change-image4 1s infinite;
@@ -357,11 +375,6 @@ body {
 .c6 {
   background-image: url(../images/cube6.svg);
   animation: change-image6 1s infinite;
-}
-.c4,
-.c5,
-.c6 {
-  background-position: 1.7vw 1.5vh;
 }
 .c7 {
   background-image: url(../images/cube7.svg);
@@ -375,82 +388,74 @@ body {
   background-image: url(../images/cube9.svg);
   animation: change-image9 1s infinite;
 }
-.c7,
-.c8,
-.c9 {
-  background-position: 1.7vw 3vh;
-}
-.c1:hover, 
-.c2:hover, 
-.c3:hover, 
-.c4:hover, 
-.c5:hover, 
-.c6:hover, 
-.c7:hover, 
-.c8:hover, 
-.c9:hover {
+.screen3__cubes:hover {
   animation-play-state: paused;
   animation-delay: 99999s;
 }
-.fourthscreen {
+
+.running-see {
+  animation-name: running-see;
+}
+
+/* Screen 4 */
+
+.screen4 {
+  height: 75vh;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.see {
+.screen4__hypnosis {
   width: 100%;
   height: 100%;
   position: absolute;
   background-repeat: no-repeat;
 }
-.bg6 {
+.screen4__bg1 {
   background-image: url(../images/yousee2.svg);
   z-index: -3;
   background-position: center;
   animation: fade-in-out 4s linear infinite;
 }
-.bg7 {
+.screen4__bg2 {
   background-image: url(../images/yousee1.svg);
   z-index: -1;
   background-position: center;
   animation: shaking 0.5s linear infinite;
 }
-.you_see {
+.screen4__translation {
   position: absolute;
-  width: 27vw;
-  height: 9vh;
-  top: 35vh;
-  left: 37vw;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
 }
-.hello {
-  position: relative;
+.screen4__hello {
   font-size: 9.6vh;
 }
-.hello span {
-  position: absolute;
+.screen4__hello span {
   opacity: 0;
   transition: opacity 0.8s ease;
+  position: absolute;
+  display: block;
+  width: 100vw;
+  text-align: center;
 }
 
-.hello span:first-child {
+.screen4__hello #screen4__hello1 {
   opacity: 1;
-  left: 2vw;
 }
 
-.hello:hover span:first-child {
+.screen4__hello:hover #screen4__hello1 {
   opacity: 0;
 }
 
-.hello:hover span:last-child {
+.screen4__hello:hover #screen4__hello2 {
   opacity: 1;
 }
-.basement span {
+#credentials {
   position: absolute;
   top: 1.3vh;
-  display: inline-block;
-  animation: running-text 10s linear infinite;
   width: 100%;
-}
-.basement span:hover {
-  animation-play-state: paused;
+  animation-name: running-credentials;
 }

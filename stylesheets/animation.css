@@ -1,261 +1,271 @@
 @keyframes cross {
-    0% {
-      background-position: 0 40%;
-    }
-    100% {
-      background-position: 0 75%;
-    }  
+  0% {
+    background-position: 0 40%;
   }
+  100% {
+    background-position: 0 75%;
+  }  
+}
 @keyframes reverse-cross {
-    0% {
-      background-position: 0 75%;
-    }
-    100% {
-      background-position: 0 40%;
-    }
+  0% {
+    background-position: 0 75%;
   }
+  100% {
+    background-position: 0 40%;
+  }
+}
 @keyframes lines {
-    0% {
-      background-position: 80% 0;
-    }
-    100% {
-      background-position: 50% 0;
-    }
+  0% {
+    background-position: 80% 0;
   }
-@keyframes running-text {
-    to {
-        transform: translateX(-49vw);
-    }
+  100% {
+    background-position: 50% 0;
   }
+}
+
 @keyframes circle-motion-large {
-    0%, 100% {
-        background-position: center;
-    }
-    25% {
-        background-position: 65% 65%; /* Увеличенная амплитуда в 1.5 раза */
-    }
-    50% {
-        background-position: 85% 45%; /* Увеличенная амплитуда в 1.5 раза */
-    }
-    75% {
-        background-position: 65% 25%; /* Увеличенная амплитуда в 1.5 раза */
-    }
+  0%, 100% {
+      background-position: center;
   }
+  25% {
+      background-position: 65% 65%; /* Увеличенная амплитуда в 1.5 раза */
+  }
+  50% {
+      background-position: 85% 45%; /* Увеличенная амплитуда в 1.5 раза */
+  }
+  75% {
+      background-position: 65% 25%; /* Увеличенная амплитуда в 1.5 раза */
+  }
+}
   
 @keyframes circle-motion-small {
-    0%, 100% {
-        background-position: center;
-    }
-    25% {
-        background-position: 55% 55%; /* Меньшая амплитуда, чем у bg1 */
-    }
-    50% {
-        background-position: 60% 50%; /* Меньшая амплитуда, чем у bg1 */
-    }
-    75% {
-        background-position: 55% 45%; /* Меньшая амплитуда, чем у bg1 */
-    }
+  0%, 100% {
+      background-position: center;
   }
-@keyframes running-textname {
-    to {
-        transform: translateX(-65.13vw); /* Конечное положение слева от контейнера */
-    }
+  25% {
+      background-position: 55% 55%; /* Меньшая амплитуда, чем у screen1__bg1 */
   }
+  50% {
+      background-position: 60% 50%; /* Меньшая амплитуда, чем у screen1__bg1 */
+  }
+  75% {
+      background-position: 55% 45%; /* Меньшая амплитуда, чем у screen1__bg1 */
+  }
+}
+
+@keyframes running-museum {
+  to {
+      transform: translateX(-76vh);
+  }
+}
+
+@keyframes running-museum-name {
+  to {
+      transform: translateX(-87.5vh); /* Конечное положение слева от контейнера */
+  }
+}
+
+
 @keyframes move-right {
-    to {
-        background-position: 100% 0;
-    }
+  to {
+      background-position: 100% 0;
   }
+}
   
-/* @keyframes move-left {
-    to {
-        background-position: -100% 29.6vh;
-    }
-  } */
 @keyframes move-left2 {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } 
-  }
+  to { transform: translateX(-29.6vh); } 
+}
   
 @keyframes move-right2 {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
+  0% { transform: translateX(-26.6vh); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes running-look {
+  to {
+      transform: translateX(-49.8vh);
   }
-@keyframes move-up-down {
-    0%, 100% {
-        background-position: -0.2vw -7vh;
-    }
-    50% {
-        background-position: -0.2vw -25vh; /* Измените это значение в зависимости от желаемого диапазона движения */
-    }
+}
+
+@keyframes running-see {
+  to {
+      transform: translateX(-47.3vh);
   }
+}
+
+@keyframes running-credentials {
+  to {
+      transform: translateX(-116.16vh);
+  }
+}
+
 @keyframes color-change {
-    0%, 100% {
-        background-color: #0047FF; /* Синий в начале и в конце анимации */
-    }
-    50% {
-        background-color: #FF0000; /* Красный в середине анимации */
-    }
+  0%, 100% {
+      background-color: #0047FF; /* Синий в начале и в конце анимации */
   }
+  50% {
+      background-color: #FF0000; /* Красный в середине анимации */
+  }
+}
 @keyframes move-up-down2 {
-    0%, 100% {
-        transform: translateY(-120vh); 
-    }
-    25%  {
-        transform: translateY(-50vh);
-    }
-    50% {
-      transform: translateY(-55vh);
-    }
-    75% {
-      transform: translateY(-70vh);
-    }
+  0%, 100% {
+      transform: translateY(-120vh); 
   }
+  25%  {
+      transform: translateY(-50vh);
+  }
+  50% {
+    transform: translateY(-55vh);
+  }
+  75% {
+    transform: translateY(-70vh);
+  }
+}
 @keyframes color-change2 {
-    0%, 100% {
-      background-color: #171717;
-    }
-    33% {
-      background-color: #0047FF;
-    }
-    66% {
-      background-color: #FF0000;
-    }
+  0%, 100% {
+    background-color: #171717;
   }
+  33% {
+    background-color: #0047FF;
+  }
+  66% {
+    background-color: #FF0000;
+  }
+}
 @keyframes bashkir {
-    0%, 100% {
+  0%, 100% {
       transform: translateX(10vw); /* Начало и конец анимации в исходном положении */
   }
   50% {
       transform: translateX(-322vw); /* Сдвиг на 400vw влево */
   }
-  }
+}
 @keyframes move-up-down3 {
-    0%, 100% {
-        transform: translateY(-70vh); 
-    }
-    50%  {
-        transform: translateY(-10vh);
-    }
+  0%, 100% {
+      transform: translateY(-70vh); 
   }
+  50%  {
+      transform: translateY(-10vh);
+  }
+}
 @keyframes fade-in-out {
-    0%, 100% {
-        opacity: 1; /* Полностью непрозрачный */
-    }
-    50% {
-        opacity: 0.2; /* Немного прозрачный (угасание на 20%) */
-    }
+  0%, 100% {
+      opacity: 1; /* Полностью непрозрачный */
   }
+  50% {
+      opacity: 0.2; /* Немного прозрачный (угасание на 20%) */
+  }
+}
 @keyframes shaking {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(-1vw, 1vh);
-    }
-    50% {
-        transform: translate(1vw, -1vh);
-    }
-    75% {
-        transform: translate(-1vw, 1vh);
-    }
+  0%, 100% {
+      transform: translate(0, 0);
   }
-  @keyframes change-image1 {
-    0%, 100% { 
-      background-image: url(../images/cube1.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube7.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube5.svg); 
-    }
+  25% {
+      transform: translate(-1vw, 1vh);
   }
-  @keyframes change-image2 {
-    0%, 100% { 
-      background-image: url(../images/cube2.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube3.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube9.svg); 
-    }
+  50% {
+      transform: translate(1vw, -1vh);
   }
-  @keyframes change-image3 {
-    0%, 100% { 
-      background-image: url(../images/cube3.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube4.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube7.svg); 
-    }
+  75% {
+      transform: translate(-1vw, 1vh);
   }
-  @keyframes change-image4 {
-    0%, 100% { 
-      background-image: url(../images/cube4.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube9.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube8.svg); 
-    }
+}
+@keyframes change-image1 {
+  0%, 100% { 
+    background-image: url(../images/cube1.svg); 
   }
-  @keyframes change-image5 {
-    0%, 100% { 
-      background-image: url(../images/cube5.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube1.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube6.svg); 
-    }
+  33% { 
+    background-image: url(../images/cube7.svg); 
   }
-  @keyframes change-image6 {
-    0%, 100% { 
-      background-image: url(../images/cube6.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube2.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube4.svg); 
-    }
+  67% { 
+    background-image: url(../images/cube5.svg); 
   }
-  @keyframes change-image7 {
-    0%, 100% { 
-      background-image: url(../images/cube7.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube8.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube2.svg); 
-    }
+}
+@keyframes change-image2 {
+  0%, 100% { 
+    background-image: url(../images/cube2.svg); 
   }
-  @keyframes change-image8 {
-    0%, 100% { 
-      background-image: url(../images/cube8.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube7.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube2.svg); 
-    }
+  33% { 
+    background-image: url(../images/cube3.svg); 
   }
-  @keyframes change-image9 {
-    0%, 100% { 
-      background-image: url(../images/cube9.svg); 
-    }
-    33% { 
-      background-image: url(../images/cube5.svg); 
-    }
-    67% { 
-      background-image: url(../images/cube1.svg); 
-    }
+  67% { 
+    background-image: url(../images/cube9.svg); 
   }
+}
+@keyframes change-image3 {
+  0%, 100% { 
+    background-image: url(../images/cube3.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube4.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube7.svg); 
+  }
+}
+@keyframes change-image4 {
+  0%, 100% { 
+    background-image: url(../images/cube4.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube9.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube8.svg); 
+  }
+}
+@keyframes change-image5 {
+  0%, 100% { 
+    background-image: url(../images/cube5.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube1.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube6.svg); 
+  }
+}
+@keyframes change-image6 {
+  0%, 100% { 
+    background-image: url(../images/cube6.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube2.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube4.svg); 
+  }
+}
+@keyframes change-image7 {
+  0%, 100% { 
+    background-image: url(../images/cube7.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube8.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube2.svg); 
+  }
+}
+@keyframes change-image8 {
+  0%, 100% { 
+    background-image: url(../images/cube8.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube7.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube2.svg); 
+  }
+}
+@keyframes change-image9 {
+  0%, 100% { 
+    background-image: url(../images/cube9.svg); 
+  }
+  33% { 
+    background-image: url(../images/cube5.svg); 
+  }
+  67% { 
+    background-image: url(../images/cube1.svg); 
+  }
+}
